@@ -1,0 +1,136 @@
+.cv-page {
+  width: 210mm;
+  min-height: 297mm;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #111111;
+  padding: 18mm 16mm;
+  line-height: calc(1.38 * var(--cv-density, 1));
+}
+
+.se-01 .cv-header {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--cv-accent, #12372a);
+}
+
+.se-01 h1 {
+  margin: 0;
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--cv-accent, #12372a);
+}
+
+.se-01 .cv-title {
+  margin: 4px 0 0;
+  font-size: 11.5pt;
+  font-weight: 500;
+}
+
+.se-01 .cv-contacts {
+  margin: 8px 0 0;
+  font-size: 9.5pt;
+  color: #333333;
+}
+
+.se-01 .cv-sep {
+  color: #777777;
+}
+
+.se-01 .cv-section {
+  margin-top: calc(13px * var(--cv-density, 1));
+}
+
+.se-01 h2 {
+  margin: 0 0 7px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #cfcfcf;
+  color: var(--cv-accent, #12372a);
+  font-size: 10.5pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.se-01 h3 {
+  margin: 0;
+  font-size: 10.5pt;
+  font-weight: 650;
+}
+
+.se-01 p,
+.se-01 li {
+  margin: 0;
+  font-size: 1em;
+}
+
+.se-01 p + p,
+.se-01 ul {
+  margin-top: 5px;
+}
+
+.se-01 ul {
+  padding-left: 16px;
+}
+
+.se-01 li + li {
+  margin-top: 3px;
+}
+
+.se-01 .cv-entry {
+  margin-bottom: calc(10px * var(--cv-density, 1));
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.se-01 .cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.se-01 .cv-entry-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.se-01 .cv-entry-head span,
+.se-01 .cv-meta {
+  color: #444444;
+  font-size: 9.5pt;
+}
+
+.se-01 .cv-skill-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.se-01 .cv-skill-list li + li {
+  margin-top: 2px;
+}
+
+@media print {
+  .cv-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .se-01 h2 {
+    break-after: avoid;
+  }
+
+  .se-01 .cv-entry {
+    break-inside: avoid;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}

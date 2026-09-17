@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-cv: Inter, Helvetica, Arial, sans-serif;
+
+  --color-mint: #98ffcc;
+  --color-mint-dark: #6fe7b7;
+  --color-ink: #12372a;
+  --color-canvas: #f8faf9;
+  --color-paper: #ffffff;
+  --color-ink-text: #17201c;
+  --color-muted: #66736d;
+  --color-line: #dde7e2;
+  --color-danger: #8a1f1f;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink-text);
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.section-nav-scroll {
+  scrollbar-width: none;
+}
+
+.section-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.home-hero {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 82% 18%, rgba(152, 255, 204, 0.34), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 8% 88%, rgba(111, 231, 183, 0.12), transparent 55%),
+    linear-gradient(to right, rgba(221, 231, 226, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(221, 231, 226, 0.22) 1px, transparent 1px);
+  background-size: auto, auto, 36px 36px, 36px 36px;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    background: #fff;
+    height: auto;
+    min-height: 0;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
